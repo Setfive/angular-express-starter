@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   ILoginRequest,
-  ILoginResponse,
+  ILoginResponse, IProfileResponse,
   IRegisterRequest,
   IRegisterResponse,
 } from './requestTypes';
@@ -29,6 +29,11 @@ export class AuthenticationService {
   }
   setJwtToken(token: string): void {
     this.jwtToken = token;
+  }
+
+  profile() {
+    return this.httpClient
+               .get<IProfileResponse>(`${environment.apiUrl}/api/profile`, this.getAuthenticatedHttpOption());
   }
 
   registerUser(registrationRequest: IRegisterRequest) {

@@ -17,6 +17,13 @@ export interface ILoginRequest {
   password: string;
 }
 
+export interface IProfileResponse {
+  name: string;
+  email: string;
+  uniqueId: string;
+  token: string;
+}
+
 export type IRegisterResponse = IError<IRegisterRequest> | IRegisterSuccess;
 
 export interface ILoginResponse {

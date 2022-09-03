@@ -1,30 +1,73 @@
-<h1 class="page-header">Sign Up</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
 
-<form class="form-group" [formGroup]="registerForm" (ngSubmit)="registerUser()">
-  <label for="register-name" class="fw-bold pb-3">Name</label><br>
-  <input class="form-control" type="text" placeholder="Name" id="register-name" formControlName="name">
-  <div class="invalid-feedback d-block" *ngIf="registerForm.controls.name.errors && validationError">
-    Required field
-  </div><br>
-  <label for="register-email" class="fw-bold pb-3">Email</label><br>
-  <input class="form-control" type="text" placeholder="Email" id="register-email" formControlName="email">
-  <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['required'] && validationError;else validEmailCheck">
-    Required field
+      <h1 class="page-header">Sign Up</h1>
+
+      <form class="form-group" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+        <label for="register-name" class="fw-bold pb-3">Name</label><br>
+        <input class="form-control" type="text" placeholder="Name" id="register-name" formControlName="name">
+        <div class="invalid-feedback d-block" *ngIf="registerForm.controls.name.errors && validationError">
+          Required field<div class="row">
+  <div class="col-8 offset-2">
+
+    <h1 class="page-header">Sign Up</h1>
+
+    <form class="form-group" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+      <label for="register-name" class="fw-bold pb-3">Name</label><br>
+      <input class="form-control" type="text" placeholder="Name" id="register-name" formControlName="name">
+      <div class="invalid-feedback d-block" *ngIf="registerForm.controls.name.errors && validationError">
+        Required field
+      </div><br>
+      <label for="register-email" class="fw-bold pb-3">Email</label><br>
+      <input class="form-control" type="text" placeholder="Email" id="register-email" formControlName="email">
+      <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['required'] && validationError;else validEmailCheck">
+        Required field
+      </div>
+      <ng-template #validEmailCheck>
+        <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['email'] && validationError">
+          Invalid email address
+        </div>
+      </ng-template><br>
+      <label for="register-password" class="fw-bold pb-3">Password</label><br>
+      <input class="form-control" type="password" placeholder="Password" id="register-password" formControlName="password">
+      <div class="invalid-feedback d-block" *ngIf="registerForm.controls.password.errors && validationError">
+        Required field
+      </div><br>
+      <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-primary btn-lg px-5" id="register-btn">Let's Go!</button><br>
+      </div>
+      <div id="email-alert" class="alert alert-danger text-center" *ngIf="serverError">
+        Sorry! An account with that email already exists.
+      </div>
+    </form>
+
   </div>
-  <ng-template #validEmailCheck>
-    <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['email'] && validationError">
-      Invalid email address
+</div>
+        </div><br>
+        <label for="register-email" class="fw-bold pb-3">Email</label><br>
+        <input class="form-control" type="text" placeholder="Email" id="register-email" formControlName="email">
+        <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['required'] && validationError;else validEmailCheck">
+          Required field
+        </div>
+        <ng-template #validEmailCheck>
+          <div class="invalid-feedback d-block" *ngIf="registerForm.controls.email.errors?.['email'] && validationError">
+            Invalid email address
+          </div>
+        </ng-template><br>
+        <label for="register-password" class="fw-bold pb-3">Password</label><br>
+        <input class="form-control" type="password" placeholder="Password" id="register-password" formControlName="password">
+        <div class="invalid-feedback d-block" *ngIf="registerForm.controls.password.errors && validationError">
+          Required field
+        </div><br>
+        <div class="d-flex justify-content-center mb-4">
+          <button class="btn btn-primary btn-lg px-5" id="register-btn">Let's Go!</button><br>
+        </div>
+        <div id="email-alert" class="alert alert-danger text-center" *ngIf="serverError">
+          Sorry! An account with that email already exists.
+        </div>
+      </form>
+
     </div>
-  </ng-template><br>
-  <label for="register-password" class="fw-bold pb-3">Password</label><br>
-  <input class="form-control" type="password" placeholder="Password" id="register-password" formControlName="password">
-  <div class="invalid-feedback d-block" *ngIf="registerForm.controls.password.errors && validationError">
-    Required field
-  </div><br>
-  <div class="d-flex justify-content-center mb-4">
-    <button class="btn btn-primary btn-lg px-5" id="register-btn">Let's Go!</button><br>
   </div>
-  <div id="email-alert" class="alert alert-danger text-center" *ngIf="serverError">
-    Sorry! An account with that email already exists.
-  </div>
-</form>
+</div>
