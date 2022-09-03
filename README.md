@@ -1,27 +1,27 @@
-# ProjectRooster
+# Angular and Express starter project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+This is an [Angular](https://angular.io/) (14) and [Express](https://expressjs.com/) (4.18) starter project. 
 
-## Development server
+It includes several libraries to kickstart your project:
+* [Bootstrap](https://getbootstrap.com/)
+* [Passport.js](https://www.passportjs.org/)
+* [TypeORM](https://typeorm.io/)
+* [class-validator](https://github.com/typestack/class-validator)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Get started
 
-## Code scaffolding
+Install the dependencies with ```npm install```, then you'll need to start the 
+Express server by running ```npm run start-server``` and start the Angular dev server with ```npm start```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Angular app will come up at http://localhost:4200 and the Express API will be available at http://localhost:8080
 
-## Build
+Click the "Register" button to register a user. After you register you'll be automatically logged in and see your profile on the Dashboard.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Now, you can refresh the page and login with the user you just created.
 
-## Running unit tests
+## Next steps
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The first thing you may want to do is replace Sqlite with a fully featured database like Postgres.
+To do that, install [pg](https://www.npmjs.com/package/pg) and then change the connection details in server/src/database.ts
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+After that, you can add new Angular components and Express routes to build out your application.
