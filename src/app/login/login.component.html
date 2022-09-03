@@ -1,0 +1,24 @@
+<div class="mt-5 mx-0 container-fluid px-5" id='content'>
+  <div class="row">
+    <div class="col-4 offset-4">
+      <div class="alert alert-danger text-center mb-4" *ngIf="serverError">
+        {{serverErrorMessage}}
+      </div>
+      <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <label for="login-email" class="fw-bold pb-3">Email Address</label><br>
+        <input class="form-control mb-4" type="text" placeholder="Email" id="login-email" formControlName="email">
+        <div class="invalid-feedback d-block" *ngIf="loginForm.controls.email.errors && validationError">
+          Please enter your email address
+        </div><br>
+        <label for="login-password" class="fw-bold pb-3">Password</label><br>
+        <input class="form-control mb-4" type="password" placeholder="Password" id="login-password" formControlName="password">
+        <div class="invalid-feedback d-block" *ngIf="loginForm.controls.password.errors && validationError">
+          Please enter your password
+        </div><br>
+        <div class="d-flex justify-content-center mb-4">
+          <button class="btn btn-primary btn-lg px-5">Login</button><br>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

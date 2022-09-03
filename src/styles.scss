@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+.form-help-text {
+  color: grey;
+  text-align: right;
+}
+
+.page-header {
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 45px;
+}

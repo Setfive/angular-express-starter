@@ -1,0 +1,12 @@
+<div class="col-8 offset-2">
+    <h2>Dashboard</h2>
+
+    <div class="alert alert-success" *ngIf="isAuthenticated">You're authenticated!</div>
+
+    <div class="alert alert-danger" *ngIf="!isAuthenticated">You're not logged in!!</div>
+
+    <div class="mt-3 text-center" *ngIf="!isAuthenticated">
+        <a class="btn btn-primary" routerLink="/register">Register</a><br>
+        <a class="btn btn-primary" routerLink="/login">Login</a>
+    </div>
+</div>
