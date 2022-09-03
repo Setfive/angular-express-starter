@@ -7,6 +7,10 @@ It includes several libraries to kickstart your project:
 * [Passport.js](https://www.passportjs.org/)
 * [TypeORM](https://typeorm.io/)
 * [class-validator](https://github.com/typestack/class-validator)
+* [class-transformer](https://github.com/typestack/class-transformer)
+* [eslint](https://eslint.org/)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
+* [prettier](https://prettier.io/)
 
 ## Get started
 
