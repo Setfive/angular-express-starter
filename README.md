@@ -24,6 +24,19 @@ Click the "Register" button to register a user. After you register you'll be aut
 
 Now, you can refresh the page and login with the user you just created.
 
+## Authentication
+
+Authentication is being handled by [Passport.js](https://www.passportjs.org/) with JWT tokens.
+The implementation code is in server/src/security/passport.ts
+
+## Database
+
+A Sqlite database at db.sqlite is being accessed via [TypeORM](https://typeorm.io/)
+
+## Git hooks
+
+Git hooks are being executed via Husky. The hooks are configured in .husky/pre-commit
+
 ## Next steps
 
 The first thing you may want to do is replace Sqlite with a fully featured database like Postgres.
