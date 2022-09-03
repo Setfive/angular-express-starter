@@ -4,9 +4,9 @@ import {
   ValidationOptions,
   ValidatorConstraint,
   ValidatorConstraintInterface,
-} from 'class-validator';
-import { getDatasource } from '../database';
-import { User } from '../entity/user';
+} from "class-validator";
+import { getDatasource } from "../database";
+import { User } from "../entity/user";
 
 @ValidatorConstraint({ async: true })
 export class NonUniqueEmailConstraint implements ValidatorConstraintInterface {
@@ -25,7 +25,7 @@ export class NonUniqueEmailConstraint implements ValidatorConstraintInterface {
 
 export function UniqueEmail(validationOptions?: ValidationOptions) {
   validationOptions = {
-    ...{ message: '$value already exists. Do you already have an account?' },
+    ...{ message: "$value already exists. Do you already have an account?" },
     ...validationOptions,
   };
   return function (object: Object, propertyName: string) {

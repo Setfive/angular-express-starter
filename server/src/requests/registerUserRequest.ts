@@ -1,14 +1,14 @@
-import { IsNotEmpty } from 'class-validator';
-import { UniqueEmail } from './uniqueValidation';
+import { IsNotEmpty } from "class-validator";
+import { UniqueEmail } from "./uniqueValidation";
 
 export default class RegisterUserRequest {
   @IsNotEmpty()
-  name: string = '';
+  name: string = "";
 
   @UniqueEmail()
   @IsNotEmpty()
-  email: string = '';
+  email: string = "";
 
   @IsNotEmpty()
-  password: string = '';
+  password: string = "";
 }

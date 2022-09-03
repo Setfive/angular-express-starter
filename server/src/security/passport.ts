@@ -1,20 +1,20 @@
-import { User } from '../entity/user';
-import * as jwt from 'jsonwebtoken';
-import { IUserToken } from './token';
-import { ExtractJwt, VerifiedCallback, Strategy } from 'passport-jwt';
-import { getDatasource } from '../database';
-import * as Express from 'express';
-import * as Passport from 'passport';
-import { StrategyCreatedStatic } from 'passport';
-import { plainToInstance } from 'class-transformer';
-import { LoginRequest } from '../requests/loginRequest';
-import { validate } from 'class-validator';
-import { UserService } from '../services/userService';
-const passport = require('passport');
-const bcrypt = require('bcrypt');
+import { User } from "../entity/user";
+import * as jwt from "jsonwebtoken";
+import { IUserToken } from "./token";
+import { ExtractJwt, VerifiedCallback, Strategy } from "passport-jwt";
+import { getDatasource } from "../database";
+import * as Express from "express";
+import * as Passport from "passport";
+import { StrategyCreatedStatic } from "passport";
+import { plainToInstance } from "class-transformer";
+import { LoginRequest } from "../requests/loginRequest";
+import { validate } from "class-validator";
+import { UserService } from "../services/userService";
+const passport = require("passport");
+const bcrypt = require("bcrypt");
 
 // TODO: Move this into an envar
-const JWT_SECRET = 'yxxB73KT39q8';
+const JWT_SECRET = "yxxB73KT39q8";
 
 export function getJWTTokenForUser(user: User) {
   const body = { id: user.uniqueId };
@@ -43,7 +43,7 @@ class LoginRequestPassportStrategy
   // @ts-ignore
   public success: (user: Express.User, info?: object) => void;
 
-  name = 'uniqueIdStrategy';
+  name = "uniqueIdStrategy";
 
   async authenticate(req: Express.Request, options?: any): Promise<any> {
     // TODO: We shouldn't need this "as any" but I can't see what's going on here
@@ -78,7 +78,7 @@ class LoginRequestPassportStrategy
 }
 
 export function configurePassport() {
-  passport.use('login', new LoginRequestPassportStrategy());
+  passport.use("login", new LoginRequestPassportStrategy());
 
   // TODO: The types on the callback from @types/passport aren't matching up
   const handleAuth: any = async (

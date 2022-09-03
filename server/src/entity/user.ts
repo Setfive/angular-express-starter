@@ -5,17 +5,17 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
-} from 'typeorm';
+} from "typeorm";
 
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @CreateDateColumn({ type: 'text' })
+  @CreateDateColumn({ type: "text" })
   createdAt!: Date;
 
-  @UpdateDateColumn({ type: 'text' })
+  @UpdateDateColumn({ type: "text" })
   updatedAt!: Date;
 
   @Column()

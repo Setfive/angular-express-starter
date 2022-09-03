@@ -1,10 +1,10 @@
-import RegisterUserRequest from '../requests/registerUserRequest';
-import { User } from '../entity/user';
-import ShortUniqueId from 'short-unique-id';
-import { IUserToken } from '../security/token';
-import { VerifiedCallback } from 'passport-jwt';
-import { getDatasource } from '../database';
-const bcrypt = require('bcrypt');
+import RegisterUserRequest from "../requests/registerUserRequest";
+import { User } from "../entity/user";
+import ShortUniqueId from "short-unique-id";
+import { IUserToken } from "../security/token";
+import { VerifiedCallback } from "passport-jwt";
+import { getDatasource } from "../database";
+const bcrypt = require("bcrypt");
 
 const uid = new ShortUniqueId();
 
