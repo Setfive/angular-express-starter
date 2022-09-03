@@ -11,6 +11,7 @@ It includes several libraries to kickstart your project:
 * [eslint](https://eslint.org/)
 * [bcrypt](https://www.npmjs.com/package/bcrypt)
 * [prettier](https://prettier.io/)
+* [Husky](https://github.com/typicode/husky)
 
 ## Get started
 
